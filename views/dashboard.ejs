@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <title>Virtual Stock</title>
+  </head>
+
+  <body>
+    <%- include("partials/nav.ejs") %>
+    <h1 id="userID" hidden><%= userID %></h1>
+
+    <main>
+      <h2><%= userID %>의 주식 현황</h2>
+      <br />
+
+      <div id="stockCrr">
+        <table>
+          <tr>
+            <th>종목 이름</th>
+            <th class="price">주가</th>
+          </tr>
+          <tr>
+            <td><a href="/AAPL">Apple</a> <span class="symbol">AAPL</span></td>
+            <td class="price priceDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/GOOG">Google</a> <span class="symbol">GOOG</span></td>
+            <td class="price priceDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/TLSA">Tesla</a> <span class="symbol">TSLA</span></td>
+            <td class="price priceDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/META">Facebook</a> <span class="symbol">META</span></td>
+            <td class="price priceDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/RBLX">Roblox</a> <span class="symbol"> RBLX</span></td>
+            <td class="price priceDisplay">--</td>
+          </tr>
+        </table>
+      </div>
+      <br />
+
+      <h2>잔고 상세</h2>
+      <br />
+
+      <div id="stockCrr">
+        <table>
+          <tr>
+            <th>회사</th>
+            <th class="my_price">주가</th>
+            <th class="my_average">평단</th>
+            <th class="my_payoff">손익</th>
+          </tr>
+          <tr>
+            <td><a href="/AAPL">Apple</a> <span class="symbol">AAPL</span></td>
+            <td class="my_price my_priceDisplay">--</td>
+            <td class="my_average my_averageDisplay">--</td>
+            <td class="my_payoff my_payoffDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/GOOG">Google</a> <span class="symbol">GOOG</span></td>
+            <td class="my_price my_priceDisplay">--</td>
+            <td class="my_average my_averageDisplay">--</td>
+            <td class="my_payoff my_payoffDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/TLSA">Tesla</a> <span class="symbol">TSLA</span></td>
+            <td class="my_price my_priceDisplay">--</td>
+            <td class="my_average my_averageDisplay">--</td>
+            <td class="my_payoff my_payoffDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/META">Facebook</a> <span class="symbol">META</span></td>
+            <td class="my_price my_priceDisplay">--</td>
+            <td class="my_average my_averageDisplay">--</td>
+            <td class="my_payoff my_payoffDisplay">--</td>
+          </tr>
+          <tr>
+            <td><a href="/RBLX">Roblox</a> <span class="symbol"> RBLX</span></td>
+            <td class="my_price my_priceDisplay">--</td>
+            <td class="my_average my_averageDisplay">--</td>
+            <td class="my_payoff my_payoffDisplay">--</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <script src="client/dashboard.js"></script>
+  </body>
+</html>

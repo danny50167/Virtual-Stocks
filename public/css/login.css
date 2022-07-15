@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+  margin: 5em;
+
+  --accentColor: #282a2f;
+}
+
+input {
+  /* border: 0; */
+  width: 30%;
+  aspect-ratio: 7/1;
+  border: 0;
+  background-color: var(--accentColor);
+  /* display: flex; */
+  padding-left: 1.5em;
+  color: white;
+  font-size: 1.05em;
+}
+
+#input_ID {
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+}
+#input_PW {
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+}
+
+span {
+  color: white;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: dotted;
+  color: rgb(142, 142, 142);
+}
+
+button {
+  width: 20%;
+  aspect-ratio: 8/1.6;
+  margin: 1.5em;
+  border-radius: 1.5em;
+  border: 0;
+  background-color: var(--accentColor);
+  color: white;
+}

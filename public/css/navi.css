@@ -1,0 +1,50 @@
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  
+}
+
+h3 {
+  font-weight: 600;
+}
+
+#div_navigationBar {
+  height: 6em;
+  padding: 1em;
+  position: relative;
+  background-color: #282a2f;
+  transition: 1s;
+}
+
+#div_navigationBar:hover {
+  height: 10em;
+}
+
+.verticalAlign {
+  margin: 0;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#div_navigationBar a {
+  text-decoration:none;
+  color: white;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-weight: 700;
+}
+
+.dot_profile {
+  height: 3em;
+  transition: 1s;
+}
+.dot_profile:hover {
+  scale: 1.2;
+}

@@ -1,0 +1,20 @@
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  transition: 1s;
+  user-select: none;
+}
+*:focus {
+  outline: 0;
+}
+
+body {
+  background-color: #36393f;
+  text-align: center;
+}
+
+h1 { display: inline; color: white;}
+h2 { display: inline; color: white;}
+h3 { display: inline; color: white;}
+h4 { display: inline; color: white;}
+h5 { display: inline; color: white;}
+h6 { display: inline; color: white;}

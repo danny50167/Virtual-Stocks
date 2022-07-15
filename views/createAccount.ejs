@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/createAccount.css">
+  <link rel="stylesheet" href="css/global.css">
+  <title>Virtual Stocks</title>
+</head>
+<body>
+  <%- include("partials/nav.ejs") %>
+  
+  <table id="table">
+    <form action="/createAccount" method="post" id="form">
+      <tr>
+        <td><input placeholder="Insert ID" class="ui" type="text" name="input_ID" id="input_ID"></td>
+        <td><button type="button" id="btn_checkID" class="ui">중복 ID 확인</button></td>
+      </tr>
+
+      <tr id="table_row">
+        <td>
+          <form action="/createAccount" method="post">
+            <!-- <input placeholder="Insert ID" class="ui" type="text" name="input_ID" id="input_ID"><br> -->
+            <input placeholder="Insert PW" class="ui" type="text" name="input_PW" id="input_PW"><br>
+            <input placeholder="Insert Name" class="ui" type="text" name="input_name" id="input_name"><br>
+            <input placeholder="Insert Age" class="ui" type="number" name="input_age" id="input_age"><br>
+          </form>
+          <button class="ui" id="done" type="button" disabled>Sign In</button>
+        </td>
+      </tr>
+    </form>
+  </table>
+
+
+
+  <script src="client/createAccount.js"></script>
+</body>
+</html>

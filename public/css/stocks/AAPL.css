@@ -1,0 +1,32 @@
+body {
+  --accentColor: #282a2f;
+  --subAccentColor: #36393f;
+}
+
+main {
+  padding: 3em;
+}
+
+.navUI {
+  display: flex;
+  text-align: left;
+}
+#back {
+  padding: 1.2em;
+  border: 0;
+  border-radius: 0.8em;
+  background-color: var(--accentColor);
+  color: white;
+  margin-left: 3.5em;
+}
+
+.mainUI {
+  padding: 3em;
+  background-color: #282a2f;
+  margin: 3em;
+}
+
+.UI_top {
+  display: flexbox;
+  text-align: left;
+}

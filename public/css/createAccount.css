@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+  --accentColor: #36393f;
+  --subAccentColor: #282a2f;
+}
+
+input {
+  /* width: fit-content; */
+  width: 75%;
+  margin: 0;
+  padding: 0;
+  height: 1em;
+  font-size: 1em;
+  padding: 1.2em;
+  border-radius: 0.8em;
+  background-color: var(--subAccentColor);
+}
+
+td {
+  width: 70%;
+}
+
+button {
+  width: 93%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: var(--subAccentColor) !important;
+  border-radius: 0.8em;
+  padding-top: 1.5em;
+  padding-bottom: 1.45em;
+  color: white;
+}
+
+#table {
+  width: max-content;
+  background-color: var(--accentColor);
+  padding: 1em;
+  margin: auto;
+  margin-top: 10%;
+  padding-right: 2%;
+}
+
+.ui {
+  /* background-color: white; */
+  border: 0;
+  margin: 1em;
+}

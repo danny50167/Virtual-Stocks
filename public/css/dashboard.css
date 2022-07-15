@@ -1,0 +1,79 @@
+body {
+  --accentColor: #282a2f;
+  --subAccentColor: #36393f;
+}
+
+main {
+  padding: 2.2em;
+}
+
+span {
+  color: white;
+  font-size: 1.3em;
+}
+
+.stockSymbol {
+  margin-right: 10em;
+}
+.stockPriceSymbol {
+  margin-right: 1em;
+}
+
+#stockCrr {
+  /* margin: 2em; */
+  /* background-color: var(--accentColor); */
+  display: inline-table;
+  padding: 1em;  
+}
+#stockCrr * {
+  color: rgb(231, 231, 231);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50em;
+}
+
+#userID {
+  display: none;
+}
+
+th {
+  background-color: var(--accentColor);
+}
+
+td, th {
+  /* border: 1px solid #dddddd; */
+  text-align: left;
+  padding: 1em;
+  width: 20em;
+  border-bottom: 2px solid #282a2f;
+  /* font-size: 1.1em; */
+}
+
+tr {
+  background-color: var(--subAccentColor);
+}
+
+.symbol {
+  font-size: small;
+  color: rgb(95, 95, 95);
+}
+.price {
+  text-align: right;
+}
+
+.my_price {
+  text-align: center;
+}
+.my_average {
+  text-align: center;
+}
+.my_payoff {
+  text-align: right;
+}
+
+.diff {
+  font-size: 0.8em;
+}

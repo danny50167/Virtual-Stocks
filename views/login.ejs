@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/global.css">
+  <title>Virtual Stock</title>
+</head>
+<body>
+  <%- include("partials/nav.ejs") %>
+
+  <form action="/login" method="post" id="form">
+    <input type="text" name="userID" id="input_ID" class="UI_input" placeholder="Insert ID" autocomplete="off"><br>
+    <input type="password" name="userPW" id="input_PW" class="UI_input" placeholder="Insert PW" autocomplete="off"><br>
+
+  </form><br>
+  <span>Don't have a account? <a href="/createAccount">Make one!</a></span><br>
+  <button id="btn_done">Login</button>
+
+  <script src="client/login.js"></script>
+</body>
+</html>
