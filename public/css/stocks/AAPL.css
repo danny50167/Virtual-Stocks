@@ -11,22 +11,61 @@ main {
   display: flex;
   text-align: left;
 }
+
 #back {
   padding: 1.2em;
   border: 0;
   border-radius: 0.8em;
   background-color: var(--accentColor);
   color: white;
-  margin-left: 3.5em;
+  margin-left: 3em;
 }
 
 .mainUI {
   padding: 3em;
   background-color: #282a2f;
   margin: 3em;
+  border-radius: 0.8em;
 }
 
 .UI_top {
   display: flexbox;
+  /* text-align: left; */
+}
+#div_chart {
+  display: inline-block;
   text-align: left;
+}
+#chart {
+  height: 50em;
+  width: 50em;
+}
+
+.UI_mid {
+  margin: 0 auto;
+  background-color: var(--subAccentColor);
+  padding: 2em;
+  width: 50%;
+  border-radius: 0.8em;
+  margin-top: 2em;
+}
+.input {
+  width: 35%;
+  padding: 1em;
+  border-radius: 0.8em;
+  background-color: var(--accentColor);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 0;
+  color: white;
+}
+.UI_mid_btn {
+  width: 35%;
+  padding: 1em;
+  padding-left: 7em;
+  padding-right: 7em;
+  border-radius: 0.8em;
+  background-color: var(--accentColor);
+  border: 0;
+  color: white;
 }

@@ -13,23 +13,46 @@
 
     <main>
       <div class="navUI">
-        <button id="back">⬅ Dashboard</button>
+        <a href="/dashboard" id="back">⬅ Dashboard</a>
       </div>
 
       <div class="mainUI">
         <div class="UI_top">
           <h1 id="stockName">AAPL</h1>
-          <h2 id="stockPrice">140</h2>
+          <h2 id="stockPrice">$140</h2>
         </div>
+        <br />
 
-        <table>
-          <td>
-            <div>
-              <canvas id="myChart"></canvas>
-            </div>
-          </td>
-        </table>
-      </div>
+        <div id="div_chart">
+          <canvas id="chart"></canvas>
+        </div>
+        
+        <div class="UI_mid UI_buy">
+          <!-- ! Insert Variable -->
+          <h3>잔액: 150돗</h3><br>
+          <input
+            type="number"
+            name="input_buy"
+            id="input_buy"
+            class="input"
+            type="number"
+            value="0"
+          /><br />
+          <button class="UI_mid_btn" id="btn_buy">Buy</button>
+        </div>
+        <div class="UI_mid UI_sell">
+          <!-- ! Insert Variable -->
+          <h3>애플 종목 수: 2 / 평단: 132돗</h3><br>
+          <input
+            type="number"
+            name="input_sell"
+            id="input_sell"
+            class="input"
+            type="number"
+            value="0"
+          /><br />
+          <button class="UI_mid_btn" id="btn_sell">Sell</button>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -42,10 +65,12 @@
         .then((api) => {
           const obj = api;
           const objKey = Object.keys(obj)[1];
+          const labels = (Object.keys(obj[Object.keys(obj)[1]])).slice(90);
+          console.log(labels);
 
           let prices = [];
 
-          for (let i = 0; i < 10; i++) {
+          for (let i = 0; i < 11; i++) {
             prices.push(
               Math.round(
                 obj[objKey][Object.keys(obj[Object.keys(obj)[1]])[i]][
@@ -55,26 +80,16 @@
             );
           }
 
-          const labels = [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "6",
-            "6",
-            "6",
-          ];
 
           const data = {
             labels: labels,
             datasets: [
               {
-                label: "My First dataset",
-                backgroundColor: "rgb(255, 99, 132)",
-                borderColor: "rgb(255, 99, 132)",
+                label: "AAPL",
+                backgroundColor: "rgb(256, 256, 256)",
+                borderColor: "rgb(256, 256, 256)",
                 data: prices,
+                tension: 0.2,
               },
             ],
           };
@@ -85,8 +100,10 @@
             options: {},
           };
 
-          const myChart = new Chart(document.getElementById("myChart"), config);
+          const myChart = new Chart(document.getElementById("chart"), config);
         });
     </script>
+
+    <script src="client/stocks.js"></script>
   </body>
 </html>

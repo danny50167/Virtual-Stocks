@@ -15,8 +15,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
-
-
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -57,22 +55,14 @@ app.get("/dashboard", (req, res) => {
   res.render("dashboard", { userID: userID });
 });
 
-app.get("/AAPL", (req,res) => {
-  res.render("stocks/AAPL")
-})
-app.get("/GOOG", (req,res) => {
-  res.render("stocks/GOOG")
-})
-app.get("/TSLA", (req,res) => {
-  res.render("stocks/TSLA")
-})
-app.get("/META", (req,res) => {
-  res.render("stocks/META")
-})
-app.get("/RBLX", (req,res) => {
-  res.render("stocks/RBLX")
-})
+app.get("/AAPL", (req, res) => {
+  const userID = req.cookies["userID"];
+
+  res.render("stocks/AAPL", { userID: userID });
+});
 
 app.listen(3000, () => {
-  console.log("Server started on port 3000\n-> http://localhost:3000 <-");
+  console.log(
+    "Server started on port 3000\nPreview Link  -> http://localhost:3000 <-\nGithub Link  -> https://github.com/danny50167/Virtual-Stocks <-"
+  );
 });

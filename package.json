@@ -11,7 +11,9 @@
     "request": "^2.88.2"
   },
   "devDependencies": {},
-  "dev": "nodemon",
+  "scripts": {
+    "dev": "nodemon"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

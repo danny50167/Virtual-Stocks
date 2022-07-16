@@ -1,6 +1,6 @@
 * {
   font-family: 'Noto Sans KR', sans-serif;
-  transition: 1s;
+  /* transition: 1s; */
   user-select: none;
 }
 *:focus {
