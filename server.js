@@ -61,6 +61,10 @@ app.get("/AAPL", (req, res) => {
   res.render("stocks/AAPL", { userID: userID });
 });
 
+app.get("/(링크 이름)", (req,res) => {
+  res.render("(파일이름)")
+})
+
 const buyStocks = (req, stock, price, new_num) => {
   let DB = JSON.parse(fs.readFileSync("./public/db/users.json"));
   console.log(DB[req.cookies["userID"]]["stocks"]["stocks"]);
@@ -72,11 +76,25 @@ const buyStocks = (req, stock, price, new_num) => {
     average: (Number(average) + Number(price))/2,
     num: Number(num) + Number(new_num),
   };
+  
   // console.log(DB);
   fs.writeFileSync("./public/db/users.json", JSON.stringify(DB), {
     encoding: "utf-8",
   });
 };
+
+const sellStocks = (req,stock, price, new_num) => {
+  let DB = JSON.parse(fs.readFileSync("./public/db/users.json"));
+  const num = DB[req.cookies["userID"]]["stocks"]["stocks"][stock]["num"];
+  DB[req.cookies["userID"]]["stocks"]["stocks"][stock] = {
+    average,
+    num: Number(num) - Number(new_num),
+  };
+  DB[req.cookies["userID"]]["stocks"]["stocks"]["balance"] = DB[req.cookies["userID"]]["stocks"]["stocks"]["balance"]+price*new_num;
+  fs.writeFileSync("./public/db/users.json", JSON.stringify(DB), {
+    encoding: "utf-8",
+  });
+}
 
 app.post("/AAPL", (req, res) => {
   // console.log(JSON.parse(req.cookies["buyData"]));
@@ -88,9 +106,31 @@ app.post("/AAPL", (req, res) => {
   console.log(stockPrice);
   if (type == "Buy") {
     buyStocks(req, stockName, stockPrice, num);
+  }else if ( type == "Sell") {
+    sellStocks(req, stockName, stockPrice, num);
   }
 
   res.redirect("/AAPL");
+});
+
+// AAPL -> GOGG -> TSLA -> META -> RBLX 
+
+// 하고 있음 그 순서로
+
+app.get("/GOOG", (req,res) => { 
+
+});
+
+app.get("/TSLA", (req,res) => {
+
+});
+
+app.get("/META", (req,res) => {
+  
+});
+
+app.get("/RBLX", (req,res) => {
+  
 });
 
 app.listen(3000, () => {
@@ -98,3 +138,9 @@ app.listen(3000, () => {
     "Server started on port 3000\nPreview Link  -> http://localhost:3000 <-\nGithub Link  -> https://github.com/danny50167/Virtual-Stocks <-"
   );
 });
+
+// req랑 res는 왜 쓰는거임?
+// 클라이언트가 서버한테 요청을 할때 들어오는 정보임
+// req = request(요쳥), res = response(응답)
+// ㄳ
+// 나 이제 진짜 먹으러 간다 안뇽
