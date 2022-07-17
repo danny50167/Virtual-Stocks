@@ -1,4 +1,4 @@
 {
-  "exec": "node app.js",
+  "exec": "node server.js",
   "ignore": "/node_modules"
 }

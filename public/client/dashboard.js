@@ -30,8 +30,9 @@ for (const index in apiLinks) {
     .then((response) => response.json())
     .then((data) => {
       const userDB = data[userID];
-      console.log(userDB);
-      average[index].innerHTML = userDB["stocks"]["stocks"][index]["average"];
+      const keys = Object.keys(userDB["stocks"]["stocks"]);
+
+      average[index].innerHTML = userDB["stocks"]["stocks"][keys[index]]["average"];
     });
 
   fetch(apiLinks[index])

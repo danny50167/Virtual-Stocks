@@ -6,28 +6,13 @@
     "age": "123",
     "stocks": {
       "balance": 500,
-      "stocks": [
-        {
-          "average": 120,
-          "num": 3
-        },
-        {
-          "average": 1200,
-          "num": 3
-        },
-        {
-          "average": 800,
-          "num": 3
-        },
-        {
-          "average": 140,
-          "num": 3
-        },
-        {
-          "average": 60,
-          "num": 3
-        }
-      ]
+      "stocks": {
+        "AAPL": { "average": 105, "num": 21 },
+        "GOOG": { "average": 1200, "num": 3 },
+        "TSLA": { "average": 800, "num": 3 },
+        "META": { "average": 140, "num": 3 },
+        "RBLX": { "average": 60, "num": 3 }
+      }
     }
   },
   "danny50167": {
@@ -35,5 +20,11 @@
     "name": "Danny",
     "pw": "zx448hfghi8888888888888888888888",
     "age": "13"
+  },
+  "tlqkf": {
+    "id": "tlqkf",
+    "name": "tlqkf",
+    "pw": "zx4y242fi38888888888888888888888",
+    "age": "15"
   }
 }
